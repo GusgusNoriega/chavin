@@ -1,0 +1,200 @@
+.entry-header{
+    padding-bottom: 25px;
+	border-bottom: solid 1px #aba8a8;
+}
+
+.entry-botones-superiores-propiedad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.entry-botones-superiores-propiedad > div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+	margin-right: 10px;
+}
+.entry-botones-superiores-propiedad > div > div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.entry-botones-superiores-propiedad-volver{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+span.volver-propiedades {
+    font-size: 13px;
+    font-weight: 500;
+	line-height: 1!important;
+	margin-left: 5px;
+}
+.entry-botones-superiores-propiedad .dashicons{
+    width: 25px;
+	font-size: 25px;
+	height: 25px;
+}
+.entry-header h1{
+  font-size: 30px;
+	font-weight: 600;
+	margin-top: 20px;
+}
+.entry-header h2, .entry-header p{
+  margin: 0;
+}
+.entry-header h2{
+  font-size: 22px;
+	font-weight: 600;
+	color: #fff;
+	padding: 5px 0px;
+}
+.entry-header p{
+  font-size: 15px;
+	font-weight: 600;	
+	padding: 5px 10px;
+}
+.entry-precios-venta-alquiler {
+    display: flex;
+	margin-top: 15px;
+}
+.entry-precios-venta-alquiler > div{
+   background-color: #fff;
+	margin-right: 20px;
+	width: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.entry-precios-venta-cont-venta-titulo {
+   background-color: #d64a36;
+	padding-left: 10px;
+}
+
+.entry-precios-alquiler-cont-alquiler-titulo{
+   background-color: #34a2b0;
+	padding-left: 10px;
+}
+/*estilos contenedores contenido*/
+.entry-content {
+    display: flex;
+}
+.entry-content-left {
+    width: 70%;
+	padding: 5px;
+}
+.entry-content-right {
+    width: 30%;
+	padding: 5px;
+}
+.entry-content-left-slider {
+    height: 400px;
+	border: solid 1px black;
+}
+.entry-content-left-contenedor {
+   margin-top: 20px;
+}
+.entry-content-left-contenedor h2{
+    font-size: 25px;
+	font-weight: 600;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: solid 1px #aba8a8;
+	
+}
+.entry-content-left-contenedor .dashicons{
+   color: #027c03;
+}
+.entry-content-contenedor-item-titulo{
+   font-size: 15px;
+	font-weight: 600;
+}
+.entry-content-right-contenedor-content{
+   background-color: #fff;
+	padding: 20px 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	min-height: 450px;	
+}
+.entry-content-right-contenedor-content > div{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.content-right-contenedor-content-item {
+	display: flex;  
+	flex-wrap: wrap;
+    width: 50%;
+	margin-bottom: 10px;
+}
+.content-right-contenedor-content-item span{
+   width: 100%;
+}
+.content-right-contenedor-content-item .content-right-contenedor-content-item-titulo {
+   font-size: 17px;
+   font-weight: 600;
+}
+/*slider de imagenes*/
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 18px;
+  background: #1859b3;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, a.button:hover, button:focus, html input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, a.button:focus, a.wp-block-button__link:not(.has-background):active, a.wp-block-button__link:not(.has-background):focus, a.wp-block-button__link:not(.has-background):hover {
+    color: #ffffff;
+    background-color: #114183!important;
+}
+@media screen and (max-width: 480px){
+	.entry-content {
+	display:  flex;
+    flex-wrap: wrap;
+  }
+  .entry-content-left {
+    width: 100%;
+    padding: 5px;
+  }
+  .entry-content-right {
+    width: 100%;
+    padding: 5px;
+  }
+	.slider img {
+    height: 100%;
+   
+    }
+	.entry-content-left-slider {
+    height: 300px;
+  }
+  
+}

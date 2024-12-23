@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+* {
+  font-family: Heebo;
+  scroll-behavior: smooth;
+}
+
+/*btn custom*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  border-radius: 50px;
+  color: #000;
+  background-color: #baff29;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  font-size: 16px;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #83d643;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: #000;
+  background-color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  font-size: 16px;
+  overflow: hidden;
+  //box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: #b1f540;
+}
+
+.btn-third {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  font-size: 16px;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+.btn-third:hover {
+  background-color: #b1f540;
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    font-size: 16px;
+  }
+  .btn-secondary {
+    font-size: 16px;
+  }
+  .btn-third {
+    font-size: 16px;
+  }
+}
+
+/*fondos*/
+.degradado {
+  background: linear-gradient(
+    93deg,
+    #fff 4.48%,
+    rgba(223, 236, 255, 0.98) 96.48%
+  );
+}
+.degradado-blue {
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 0.2) 1%,
+    rgba(0, 0, 0, 0.35) 80%,
+    rgba(0, 0, 0, 0.2) 99%
+  );
+  background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que el fondo se repita */
+}
+
+.degradado-blue-2 {
+  background: linear-gradient(
+    5deg,
+    #fff 18.38%,
+    rgba(223, 236, 255, 0.98) 100.71%
+  );
+}
+.degradado-blue-3 {
+  background: linear-gradient(
+    92deg,
+    #fff 4.15%,
+    rgba(223, 236, 255, 0.98) 106.42%
+  );
+}
+
+/*link hover*/
+.link-border {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+.link-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #baff29;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+  pointer-events: none;
+}
+/* Efecto de hover */
+.link-border:hover::after {
+  transform: scaleX(1);
+}
+.link-border-active {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+.link-border-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #baff29;
+  transform-origin: left;
+  animation: border-appear 0.3s ease-out forwards;
+}
+@keyframes border-appear {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Gradiente vertical, de arriba a abajo */
+.gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0) 100%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
+}
+.gradient-overlay-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
+}
+
+.gradient-overlay-3 {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
+}
+
+/*menu responsive*/
+.btn_span {
+  position: absolute;
+  top: -2.5px;
+  width: 30px;
+  height: 2px;
+  border-radius: 20px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.btn_span:nth-child(2) {
+  top: 7.5px;
+}
+.btn_span:nth-child(3) {
+  top: 17.5px;
+}
+#btn_menu:checked ~ .btn_menu #btn_span_1 {
+  top: 5px;
+  transform: rotate(45deg);
+}
+#btn_menu:checked ~ .btn_menu #btn_span_2 {
+  opacity: 0;
+}
+#btn_menu:checked ~ .btn_menu #btn_span_3 {
+  top: 5px;
+  transform: rotate(-45deg);
+}
+
+/*container custom*/
+.container-full {
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .container-full {
+    width: 90%;
+  }
+}
+
+@media (min-width: 641px) {
+  .container-full {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-full {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-full {
+    width: 90%;
+  }
+  .btn_span {
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    height: 2px;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  .btn_span:nth-child(2) {
+    top: 10px;
+  }
+  .btn_span:nth-child(3) {
+    top: 20px;
+  }
+  #btn_menu:checked ~ .btn_menu #btn_span_1 {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  #btn_menu:checked ~ .btn_menu #btn_span_2 {
+    opacity: 0;
+  }
+  #btn_menu:checked ~ .btn_menu #btn_span_3 {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-full {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1536px) {
+  .container-full {
+    width: 100%;
+    max-width: 1300px;
+  }
+}
+
+/*btn swiper*/
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.3 !important;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/*input custom*/
+.input-custom {
+  width: 100%;
+  border: 1px solid #0200cd;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  outline: none;
+  color: #0200cd;
+  background-color: transparent;
+}
+.input-custom::placeholder {
+  color: #0200cd80;
+}
+
+.input-custom:focus::placeholder {
+  color: #0200cd80;
+}
+.input-custom.error {
+  border-color: red;
+}
+
+.checkbox-label {
+  display: flex;
+  cursor: pointer;
+}
+.custom-checkbox {
+  margin-top: 4px;
+  width: 20px;
+  height: 16px;
+  border: 1px solid #0200cd;
+  border-radius: 0.25rem;
+  position: relative;
+}
+.checkbox:checked + .custom-checkbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #0200cd;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.checkbox.error + .custom-checkbox {
+  border-color: red;
+}
+
+/*utils*/
+.no-estacion-bg {
+  background-color: #074dff33 !important;
+}
+.no-estacion-txt {
+  color: #074dff33 !important;
+}
+
+.no-estacion-bg-orange {
+  background-color: #ff970035 !important;
+}
+.no-estacion-txt-orange {
+  color: #ff970035 !important;
+}
+
+/*custom line*/
+.custom-line:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 3px;
+  height: 78%;
+  background-color: #0200cd;
+  z-index: 0;
+  animation: draw-line 4s ease-in-out forwards;
+}
+@keyframes draw-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 78%;
+  }
+}
+@media (min-width: 768px) {
+  .custom-line:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 28px;
+    width: 3px;
+    height: 78%;
+    background-color: #0200cd;
+    z-index: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .custom-line::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    width: 79%;
+    height: 3px;
+    background-color: #0200cd;
+    z-index: 0;
+  }
+  @keyframes draw-line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 79%;
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .custom-line::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    width: 75%;
+    height: 3px;
+    background-color: #0200cd;
+    z-index: 0;
+  }
+  @keyframes draw-line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+}
+
+/*carrusel infinito*/
+.container-carrusel {
+  position: relative;
+}
+.container-carrusel::before,
+.container-carrusel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container-carrusel::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 10%, rgba(248, 248, 248, 0));
+}
+
+.container-carrusel::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 10%, rgba(248, 248, 248, 0));
+}
+
+.container-carrusel-blue {
+  position: relative;
+}
+.container-carrusel-blue::before,
+.container-carrusel-blue::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container-carrusel-blue::before {
+  left: 0;
+  background: linear-gradient(to right, #f9faff 10%, rgba(248, 248, 248, 0));
+}
+
+.container-carrusel-blue::after {
+  right: 0;
+  background: linear-gradient(to left, #dfecff 10%, rgba(248, 248, 248, 0));
+}
+
+/*mapa*/
+.btn-map {
+  fill: #b3b3b3;
+}
+
+.btn-map.activo {
+  fill: #595959;
+}
+
+.btn-map.popup-activo {
+  fill: #0200cd;
+}
+
+/*flores*/
+@keyframes drawUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-up {
+  animation: drawUp 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.select-menu {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; /* Importante para que las opciones se posicionen respecto a este contenedor */
+}
+
+.select-menu .select-btn {
+  display: flex;
+  border: 1px solid #0200cd;
+  border-radius: 10px;
+  padding: 0.75rem;
+  outline: none;
+  color: #0200cd80;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.select-btn i {
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.select-menu .options {
+  position: absolute; /* Cambiado a absolute */
+  top: 100%; /* Se asegura que se despliegue debajo del botón */
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  margin-top: 10px; /* Un pequeño margen para separar el botón */
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 100; /* Asegúrate de que se muestre por encima de otros elementos */
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.options .option {
+  display: flex;
+  height: 30px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+  margin: 5px 0;
+}
+
+.options .option:hover {
+  background: transparent;
+}
+.option.selected .option-text {
+  background-color: transparent; /* Color que aparecerá cuando se seleccione */
+  color: #0200cd; /* Cambiar el color del texto si lo prefieres */
+}
+
+.option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+
+.option .option-text {
+  font-size: 17px;
+  color: #000000;
+}
+.option .option-text:hover {
+  color: #0200cd;
+}

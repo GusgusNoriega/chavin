@@ -1,0 +1,26 @@
+/*
+Theme Name: mantenimiento
+Theme URI: http://nerd.pe
+Author: Gustavo Noriega
+Author URI: http://nerd.pe
+Description: Tema realizado para Chavin
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mantenimiento
+*/
+html, body, main section {
+    height: 100% !important;
+}
+section.seccion-principal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.seccion-principal svg {
+    height: 80vh;
+}
+ 
